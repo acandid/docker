@@ -29,7 +29,7 @@ Example Playbook
 
   roles:
 
-    - /path/haproxy
+    - /path/docker
 
 ...
 
