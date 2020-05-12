@@ -1,0 +1,13 @@
+#
+docker_repo: "deb https://download.docker.com/linux/debian {{ ansible_distribution_release }} stable"
+#
+docker_gpg_key: https://download.docker.com/linux/debian/gpg
+#
+docker_required_packages:
+  - python-apt
+  - apt-transport-https
+  - ca-certificates 
+  - gnupg-agent 
+  - software-properties-common
+#
+docker_package: docker-ce

@@ -1,0 +1,10 @@
+#
+docker_repo: "yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
+#
+docker_required_packages:
+  - yum-utils
+  - device-mapper-persistent-data
+  - lvm2
+#
+docker_package: docker-ce
+#

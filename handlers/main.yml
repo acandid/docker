@@ -1,0 +1,10 @@
+---
+# handlers file for docker
+#
+- name: Restart and enable Docker service
+  service:
+    name: "{{ docker_service }}"
+    state: started
+    enabled: true
+  listen: restart_docker
+...

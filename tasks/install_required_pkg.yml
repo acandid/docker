@@ -1,0 +1,15 @@
+---
+- name: Install Required packages RedHat family
+  yum:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ docker_required_packages }}"
+  when: ansible_os_family == 'RedHat'
+#
+- name: Install Required packages Debian family
+  apt:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ docker_required_packages }}"
+  when: ansible_os_family == 'Debian'
+...
